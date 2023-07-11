@@ -1,0 +1,113 @@
+Q1.What is the use of JDBC in java?
+
+The JDBC API is a Java API that can access any kind of tabular data, especially data stored in a relational database.
+ JDBC helps you to write Java applications that manage these three programming activities: 
+ Connect to a data source, like a database. Send queries and update statements to the database.
+ 
+ 
+ Q2.What are the steps involved in JDBC?
+ 
+ Load and register the Driver
+Establish the Connection b/w java application and database
+Create a Statement Object
+Send and execute the Query
+Process the result from ResultSet
+Close the Connection
+
+
+
+Q3.What are the types of statement in JDBC in java?
+
+Create Statement
+Prepared Statement
+Callable Statement
+
+
+
+Q4.What is Servlet in Java?
+
+Servlets are the Java programs that run on the Java-enabled web server or application server.
+ They are used to handle the request obtained from the webserver, process the request, produce the response, then send a response back to the webserver. 
+
+
+ 
+Q5.Explain the life Cycle of servlet?
+ 
+Stages of the Servlet Life Cycle: The Servlet life cycle mainly goes through four stages,
+
+Loading a Servlet.
+Initializing the Servlet.
+Request handling.
+Destroying the Servlet.
+
+Loading a Servlet: The first stage of the Servlet lifecycle involves loading and initializing the Servlet by the Servlet container.
+ The Web container or Servlet Container can load the Servlet at either of the following two stages :
+Initializing the context, on configuring the Servlet with a zero or positive integer value.
+If the Servlet is not preceding stage, it may delay the loading process until the Web container determines that this Servlet is needed to service a request.
+
+Initializing a Servlet: After the Servlet is instantiated successfully, the Servlet container initializes the instantiated Servlet object. 
+The container initializes the Servlet object by invoking the Servlet.init(ServletConfig) method which accepts ServletConfig object reference as parameter.
+
+Handling request: After initialization, the Servlet instance is ready to serve the client requests.
+ The Servlet container performs the following operations when the Servlet instance is located to service a request :
+It creates the ServletRequest and ServletResponse objects.
+ In this case, if this is a HTTP request, then the Web container creates HttpServletRequest and HttpServletResponse
+ objects which are subtypes of the ServletRequest and ServletResponse objects respectively.
+After creating the request and response objects it invokes the Servlet.service(ServletRequest, ServletResponse)
+method by passing the request and response objects.
+
+Destroying a Servlet: When a Servlet container decides to destroy the Servlet, it performs the following operations,
+It allows all the threads currently running in the service method of the Servlet instance to complete their jobs and get released.
+After currently running threads have completed their jobs, the Servlet container calls the destroy() method on the Servlet instance.
+After the destroy() method is executed, the Servlet container releases all the references of this
+ Servlet instance so that it becomes eligible for garbage collection.
+ 
+ 
+ 
+
+Q6.Explain the difference between the RequestDispatcher.forward() and HttpServletResponse.sendRedirect() methods?
+ 
+ The forward () method of the RequestDispatcher works on the server-side, while the SendRedirect() method works on the client-side. 
+ 
+
+Q7.What is the purpose of the doGet() and doPost() methods in a servlet?
+
+The doGet method is called by the server (via the service method) when the client requests a GET request. It is used to retrieve information from the server.
+ The doPost method is called by the server (via the service method) when the client requests a POST request. It is used to send information to the server.
+ 
+
+
+Q8.Explain the JSP Model-View-Controller (MVC) architecture.
+
+
+MVC stands for Model View and Controller. It is a design pattern that separates the business logic, presentation logic and data.
+
+Controller acts as an interface between View and Model. Controller intercepts all the incoming requests.
+
+Model represents the state of the application i.e. data. It can also have business logic.
+
+View represents the presentaion i.e. UI(User Interface).
+
+
+
+Q9.What are some of the advantages of Servlets?
+
+1. Java Servlets are extremely portables with basis on writing once, run anywhere (WORA) program.
+
+2. Java Servlets are highly scalable and efficient as multiple requests are being able to run individual threads 
+
+3. These Servlets can be easily written within the use of Java APIs plus you can count upon for cookie handling
+ and session tracking much better with this Java components.
+ 
+4. These Servlets are completely server side component which has complete web server security.
+
+
+Q10.What are the limitations of JSP?
+
+As the JSP is compiled on the server, it is not memory and time-efficient. 
+It is hard to track errors in JSP files because they are an extension to Servlets.
+The JSP codes are processed into Servlet codes for compilation.
+ As JSP is an HTML file, it doesn't provide many features.
+ 
+ 
+
